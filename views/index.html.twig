@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/web/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/web/css/bootstrap-theme.min.css" type="text/css">
+        <link rel="stylesheet" href="/web/css/styles.css" type="text/css">
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+<div class="container">
+    <form  action="/result" method="get">
+        <label for="date">Enter the # Day of the Month</label>
+        <input type="number" name="date" >
+
+        <label for="month">enter the number of the month</label>
+        <input type="number" name="month">
+
+        <label for="year">enter a 4 digit year (after 1753)</label>
+        <input type="number" name="year" >
+
+        <button type="submit" name="button">Find it</button>
+    </form>
+    <p>
+        That Day was a: {{result}}
+    </p>
+
+</div>
+    </body>
+</html>

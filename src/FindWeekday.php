@@ -4,9 +4,9 @@ class FindWeekday {
     private $day;
     private $month;
     private $year;
-
-    function setTimeZone(){
-        date_default_timezone_set('America/Los_Angeles');
+    //
+    // function setTimeZone(){
+    //     date_default_timezone_set('America/Los_Angeles');
     }
     function __construct($newday, $newmonth, $newyear)
     {
@@ -38,14 +38,15 @@ class FindWeekday {
     {
         $this->year = $year;
     }
+    
     function getWeekday()
     {
         // $date = date("l", mktime(0, 0, 0, $this->getMonth(), $this->getDay(), $this->getYear()));
         // echo time();
         // return $date;
-        $m = $this->getMonth();
-        $y = $this->getYear();
-        $d = $this->getDay();
+        $m = $this->month;
+        $y = $this->year;
+        $d = $this->day;
         if ($m == 1 || $m == 2){
              $m = $m + 12;
              $y = $y - 1;
@@ -77,6 +78,5 @@ class FindWeekday {
 
 
     }
-
-} ?>
 //365*year + year/4 - year/100 + year/400 + date + (153*month+8)/5    jan and feb are 13 14 of prev year
+ ?>
